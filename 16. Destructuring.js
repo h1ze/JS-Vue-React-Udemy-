@@ -39,3 +39,14 @@ function getInfo(obj) {
 }
 
 getInfo(organisation);
+
+function getInfo(obj2) {
+  const {
+    name,
+    info: {
+      partners: [first, second],
+    },
+  } = obj2;
+  let newObj = { Name: name, Partners: `${first} ${second} ` };
+  console.log(newObj);
+}
