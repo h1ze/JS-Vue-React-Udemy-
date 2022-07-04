@@ -12,8 +12,8 @@ Object.defineProperty(vasya, "firstName", {
     return this.fullName.split(" ")[0];
   },
 
-  set: function (value) {
-    return (this.firstName = value.split(" ")[0]);
+  set: function (newFirstName) {
+    this.fullName = this.newFirstName + " " + this.lastName;
   },
 });
 console.log(vasya.firstName);
@@ -22,10 +22,13 @@ Object.defineProperty(vasya, "lastName", {
   get: function () {
     return this.fullName.split(" ")[1];
   },
+
+  set: function (newLastName) {
+    this.fullName = this.newFirstName + " " + this.lastName;
+  },
 });
 console.log(vasya.lastName);
 
 vasya.fullName = "Alone Tonight";
 
-let arr = Object.getOwnPropertyNames(vasya);
-console.log(arr);
+console.log(vasya.lastName);
