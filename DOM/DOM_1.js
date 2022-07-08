@@ -22,3 +22,7 @@ console.log(
   document.body.firstElementChild.firstElementChild.nextElementSibling
     .nextElementSibling
 );
+
+let divOne = document.querySelectorAll("p");
+let arrDivOne = Array.from(divOne);
+console.log(arrDivOne[1]);
